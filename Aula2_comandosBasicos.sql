@@ -52,7 +52,7 @@ select email, state, birth_date
 from sales.customers
 where (state = 'SC' or state ='SP') and birth_date < '19931002'
 
-
+ 
 
 
 -- Order By: ordena a seleção  ------------------------
@@ -66,5 +66,15 @@ order by price --ordenar em ordem crescente
 select *
 from sales.products
 order by price desc
+
+
+-- Limit: limitar o numero de linhas que vai aparecer  ------------------------
+
+-- Liste os 10 produtos mais caros da tabela products
+select *
+from sales.products
+order by price desc --ordenar em ordem crescente
+limit 10
+
 
 
